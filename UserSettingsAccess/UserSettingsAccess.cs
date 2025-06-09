@@ -106,7 +106,6 @@ namespace NetEti.FileTools
             this.Settings = new Dictionary<string, string?>();
             this.Description = documentPathName;
             string jsonOrXml = File.ReadAllText(documentPathName);
-
             if (jsonOrXml.Trim().StartsWith('{') || jsonOrXml.Trim().StartsWith('['))
             {
                 Dictionary<string, object>? dict = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonOrXml);
